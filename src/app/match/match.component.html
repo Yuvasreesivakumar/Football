@@ -1,0 +1,22 @@
+<div class="match">
+  <h2 style="text-align: center; padding: 50px; padding-left: 150px; color: aliceblue;">Matches</h2>
+
+  <div class="match-list">
+    <div class="match-card" *ngFor="let match of visibleMatches" (click)="navigateToTicketBooking(match)">
+      <div class="teams">
+        <div class="team">{{ match.team1 }}</div>
+        <div class="vs">vs</div>
+        <div class="team">{{ match.team2 }}</div>
+      </div>
+      <div class="details">
+        <div class="date">{{ match.date }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <button  (click)="previousPage()" [disabled]="pageNumber === 1" class="left">Back</button>
+    <span class="page-info">{{ pageNumber }}/{{ totalPages }}</span>
+    <button  (click)="nextPage()" [disabled]="pageNumber === totalPages" class="right">Next</button>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+.teamname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  border: 1px solid black;
+  height: 880px;
+  width: 650px;
+  border-radius: 1rem;
+  box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.team h1 {
+  font-size: 65px;
+  padding-left: 100px;
+  padding-top: 30px;
+}
+
+.team table {
+  padding-left: 0px;
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.team thead {
+  font-size: 35px;
+}
+
+.team th, .team td {
+  padding: 10px 15px;
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.team tbody {
+  font-size: 30px;
+}
+
+.team button {
+  font-size: 20px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.team button:hover {
+  background-color: #08810e;
+}
+.tm:hover {
+  color: blue;
+}

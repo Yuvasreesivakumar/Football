@@ -1,0 +1,29 @@
+<div class="home">
+  <div class="image">
+    <img src="assets/image/i1.jpg" height="650" width="1900">
+  </div>
+  <div class="teamname">
+      <div class="team">
+          <h1>Football Teams</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Team Name</th>
+                <th>Team Members</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let team of teams; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td class="tm">{{ team.name }}</td>
+                <td>
+                  <button (click)="viewTeamMembers(i + 1)">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+      </div>
+  </div>
+</div>

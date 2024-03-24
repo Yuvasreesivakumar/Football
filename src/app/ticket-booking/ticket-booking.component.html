@@ -1,0 +1,40 @@
+<body>
+<div class="tb">
+  <div class="t_b">
+    <h1>Ticket Booking</h1>
+    <h2 *ngIf="match">{{ match.teamA }} vs {{ match.teamB }}</h2>
+  </div>
+
+  <form action="/" #form="ngForm" (ngSubmit)="onSubmit(form)" name="form">
+    <div class="name">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="name" #nameInput="ngModel" pattern="[A-Za-z]+" required>
+      <div class="text-danger" *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
+        <div *ngIf="nameInput.errors?.['required']">Name is required</div>
+        <div *ngIf="nameInput.errors?.['pattern']">Name must contain only letters</div>
+      </div>
+    </div>
+
+    <div class="mb">
+      <label for="mobile">Mobile no</label>
+      <input type="tel" id="mobile" name="mobile">
+    </div>
+
+    <div class="ticket">
+      <label for="ticket">Ticket</label>
+      <select id="ticket" name="ticket" [(ngModel)]="selectedTicket" #ticketInput="ngModel" required>
+        <option value="" disabled selected>Select Ticket</option>
+        <option *ngFor="let ticket of tickets" [value]="ticket">{{ ticket }}</option>
+      </select>
+      <div class="text-danger" *ngIf="ticketInput.invalid && (ticketInput.dirty || ticketInput.touched)">
+        <div *ngIf="ticketInput.errors?.['required']">Please select a ticket</div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <button type="submit" style="font-size: 25px;" [disabled]="!form.valid" >Book Ticket</button>
+    </div>
+  </form>
+</div>
+
+</body>

@@ -1,0 +1,28 @@
+<body>
+  <div class="t_mem">
+<h1>{{ teamName }}</h1>
+<h2><strong>Country:</strong> {{ country }}</h2>
+<div class="team_mem">
+<div class="team">
+  <table>
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Team Member</th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of teamMembers; let i=index">
+        <td>{{i+1}}</td>
+        <td class="tm">{{ member.name }}</td>
+        <td class="tm">{{ member.position }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+</div>
+</body>
+
