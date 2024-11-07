@@ -38,8 +38,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/",
-            "deployUrl": "/"
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
@@ -105,4 +104,3 @@
     }
   }
 }
-
